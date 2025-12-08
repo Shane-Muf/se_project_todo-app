@@ -78,10 +78,13 @@ class FormValidator {
   }
 
   resetValidation() {
-    this._inputList.forEach((inputElement) => {
-      this._hideInputError(inputElement);
+    this._inputList.forEach((input) => {
+      input.value = "";
+      this._hideInputError(input);
     });
-    this._toggleButtonState();
+
+    this._buttonElement.classList.add(this._inactiveButtonClass);
+    this._buttonElement.disabled = true;
   }
 
   enableValidation() {
