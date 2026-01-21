@@ -50,6 +50,11 @@ class Todo {
 
     return this._todoElement;
   }
+
+  generateTodo() {
+    const todoElement = this.getView();
+    return todoElement;
+  }
 }
 
 export default Todo;
