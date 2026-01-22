@@ -12,7 +12,6 @@ export class Popup {
   close() {
     this._popupElement.classList.remove("popup_visible");
     document.removeEventListener("keyup", this._handleEscapeClose);
-    console.log("close method called");
   }
 
   _handleEscapeClose = (evt) => {
